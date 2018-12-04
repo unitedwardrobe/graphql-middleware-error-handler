@@ -1,0 +1,42 @@
+{
+  "name": "graphql-middleware-error-handler",
+  "version": "0.1.0",
+  "description": "Generic GraphQL middleware to capture errors",
+  "main": "dist/index.js",
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "tsc -d",
+    "lint": "tslint --project tsconfig.json src/**/*.ts",
+    "prettier-check": "prettier -l 'src/**/*.ts' > /dev/null || echo 'Prettier violations found, please format code using Prettier'",
+    "test": "npm run prettier-check && npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unitedwardrobe/graphql-middleware-error-handler.git"
+  },
+  "keywords": [
+    "graphql",
+    "middleware",
+    "error",
+    "exception",
+    "handler"
+  ],
+  "author": "Koen Punt <koen@unitedwardrobe.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/unitedwardrobe/graphql-middleware-error-handler/issues"
+  },
+  "homepage": "https://github.com/unitedwardrobe/graphql-middleware-error-handler#readme",
+  "devDependencies": {
+    "@types/node": "^10.12.12",
+    "graphql-middleware": "^2.0.2",
+    "prettier": "^1.15.3",
+    "rimraf": "^2.6.2",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.17.0",
+    "typescript": "^3.2.1"
+  },
+  "peerDependencies": {
+    "graphql-middleware": "^2.0.0"
+  }
+}
