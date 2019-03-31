@@ -37,6 +37,6 @@
     "typescript": "^3.2.1"
   },
   "peerDependencies": {
-    "graphql-middleware": "^2.0.0"
+    "graphql-middleware": "2.x - 3.x"
   }
 }
