@@ -1,6 +1,9 @@
 import { IMiddlewareFunction } from 'graphql-middleware';
 
-export type IErrorHandler<Context> = (error: any, context: Context) => void;
+export type IErrorHandler<Context> = (
+  error: any,
+  context: Context
+) => Promise<void>;
 
 export interface IOptions<Context> {
   onError: IErrorHandler<Context>;
@@ -18,11 +21,11 @@ export const errorHandler = <Context>({
     try {
       const res = await resolve(parent, args, ctx, info);
       if (captureReturnedErrors && res instanceof Error) {
-        onError(res, ctx);
+        await onError(res, ctx);
       }
       return res;
     } catch (err) {
-      onError(err, ctx);
+      await onError(err, ctx);
 
       // Forward error
       if (forwardErrors) {
