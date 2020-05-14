@@ -55,12 +55,12 @@ called with the error as first argument, and the GraphQL context as the second.
 
 ### `captureReturnedErrors`
 
-Determines if whe a resolver returns an error instead of throwing one it should
+Determines if a resolver returns an error instead of throwing one it should
 also be captured. Defaults to `false`.
 
 ### `forwardErrors`
 
-Determines if the the error should be rethrown after is was captured by the
+Determines if the error should be rethrown after is was captured by the
 middleware. Defaults to `false`.
 
 ## License
