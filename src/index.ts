@@ -3,7 +3,7 @@ import { IMiddlewareFunction } from 'graphql-middleware';
 export type IErrorHandler<Context> = (
   error: any,
   context: Context
-) => Promise<void>;
+) => Promise<void> | void;
 
 export interface IOptions<Context> {
   onError: IErrorHandler<Context>;
