@@ -1,6 +1,6 @@
 {
   "name": "graphql-middleware-error-handler",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Generic GraphQL middleware to capture errors",
   "main": "dist/index.js",
   "scripts": {
